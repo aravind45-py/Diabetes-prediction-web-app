@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<style>
+
+.jumbotron {
+    border: 1px solid black;
+    background-image: url("https://newgeniss.iata.org/wp-content/uploads/2017/09/nav-background-agents.jpg");
+    background-repeat: no-repeat;
+    background-position: 3px;
+
+}
+.form1 > input{
+    display:block;
+    padding-left: 15px;
+    margin-left:2cm;
+    border: 2px solid black; 
+}
+
+.form-main{
+    align-self: center;
+    margin-left: 5cm;
+    background-image:url("https://i.pinimg.com/474x/f5/8c/d4/f58cd4242bf402d46f0126917d298d53.jpg");
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+</style>
+    <title>Details</title>
+
+    <div class="jumbotron">
+    <h1>Welcome!!!</h1>
+    <p>
+
+    </p>
+    <h4>This analysis provides you 83% of accurate  result for  diabetes</h4>
+    </div>
+<div class="form-main">
+<form action="{{url_for('result')}}" class="form1">
+    <label for="preg">Pregnancies (No of Pregnancies had): </label>
+    <input id="preg" type="text" name="preg">
+    <br>
+    <label for="Glucose">Glucose: </label>
+    <input id="Glucose" type="text" name="Glucose">
+    <br>
+    <label for="BloodPressure">BloodPressure: </label>
+    <input id="BloodPressure" type="text" name="BloodPressure" >
+    <br>
+    <label for="SkinThickness">SkinThickness</label>
+    <input id="SkinThickness" type="text" name="SkinThickness" >
+    <br>
+    <label for="Insulin">Insulin: </label>
+    <input id="Insulin" type="text" name="Insulin" >
+    <br>
+    <label for="BMI">BMI: </label>
+    <input id="BMI" type="text" name="BMI" >
+    <br>
+    <label for="DiabetesPedigreeFunction">DiabetesPedigreeFunction: </label>
+    <input id="DiabetesPedigreeFunction" type="text" name="DiabetesPedigreeFunction">
+    <br>
+    <label for="Age">Age: </label>
+    <input id="Age" type="text" name="Age" >
+    <label for="submit"></label>
+    <input id="submit" type="submit" class="btn btn-primary btn-lg">
+
+</form>
+</div>
+{% endblock  %}
